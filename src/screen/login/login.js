@@ -16,7 +16,6 @@ function Login() {
                 <input type="checkbox"></input>
                     <span class="checkmark"></span>
                 </label>
-                < button class="submit">Sign in</button>
                 <input class="submit" type="submit" value="Sign in" />
             </form>
         </div>
