@@ -9,14 +9,15 @@ function Login() {
             <form>
                 <label class="formLabel">
                     Email Address
-                <input type="email" required />
+                <input class="email" type="email" required />
                 </label>
                 <label class="checkbox">
                     Remember this device
                 <input type="checkbox"></input>
                     <span class="checkmark"></span>
                 </label>
-                <input type="submit" value="Sign in" />
+                < button class="submit">Sign in</button>
+                <input class="submit" type="submit" value="Sign in" />
             </form>
         </div>
     );
