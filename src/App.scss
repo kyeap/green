@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+$font-family: "Raleway", sans-serif;
+$bgcolor: lightblue;
+$textcolor: darkblue;
+
+$fontsize-title: 40px;
+$fontsize-subtitle: 21px;
+$fontsize-label: 18px;
+$fontsize-subscript: 15px;
+$fontsize-title-425px: 25px;
+$fontsize-subtitle-425px: 15px;
+$fontsize-label-425px: 13px;
+$fontsize-subscript-425px: 12px;
+
+.app {
+  text-align: left;
+  width: 70%;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  display: table;
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.app-logo {
+  height: 40px;
+  pointer-events: none;
+}
+
+.title {
+  font: {
+    size: $fontsize-title;
+    weight: bold;
+    family: $font-family;
+  }
+  margin: 20px auto 0;
+  color: #4c4b4b;
+}
+
+.subTitle {
+  font: {
+    size: $fontsize-subtitle;
+    family: $font-family;
+  }
+  color: grey;
+  margin: 10px 0 50px 0;
+}
+
+.formLabel {
+  width: 100%;
+  font: {
+    size: $fontsize-label;
+    family: $font-family;
+  }
+  color: grey;
+}
+
+input[type="email"] {
+  width: 95%;
+  padding: 1rem 0;
+  margin: 10px auto;
+  border: 1px solid #eae7e7;
+  font: {
+    size: 1rem;
+    family: $font-family;
+  }
+  line-height: 1.25rem;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 20%;
+  background: white;
+  font: {
+    size: $fontsize-label;
+    family: $font-family;
+  }
+  padding: 14px 20px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Customize the label (the container) */
+.checkbox {
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font: {
+    size: $fontsize-subscript;
+    family: $font-family;
+  }
+  color: #3c3a3a;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .app {
+    padding: 25px;
+  }
+
+  .app-logo {
+    height: 30px;
+  }
+
+  .title {
+    font: {
+      size: $fontsize-title-425px;
+    }
+    margin: 20px auto 0;
+  }
+
+  .subTitle {
+    font: {
+      size: $fontsize-subtitle-425px;
+    }
+    margin: 0 0 50px 0;
+  }
+
+  .formLabel {
+    width: 100%;
+    font: {
+      size: $fontsize-label-425px;
+    }
+  }
+
+  input[type="text"] {
+    width: 85%;
+  }
+
+  .checkbox {
+    font-size: $fontsize-subscript-425px;
+    padding-left: 25px;
+  }
+
+  .checkmark {
+    height: 18px;
+    width: 18px;
+    top: -2px;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+    padding: 10px 5px;
+    font: {
+      size: $fontsize-label-425px;
+    }
+  }
+}
